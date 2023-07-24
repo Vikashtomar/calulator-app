@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator web</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <form action="#" id="form">
+            <input type="number" placeholder="enter first number" name="first_number">
+            <input type="number" placeholder="enter second number" name="second_number">
+            <select name="operation" id="fselect" onchange="foo()">
+                <option value="Operation" selcted>Operation</option>
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mul">*</option>
+                <option value="div">/</option>
+            </select>
+        </form>
+    </div>
+    <div class="output">
+        <p></p>
+    </div>
+
+    <script>
+
+function foo() {
+    var fselect = document.getElementById("fselect").value;
+    var ele = document.querySelector(".output p");
+    switch (fselect) {
+        case "add":
+            function add() {
+                return Number(document.getElementsByName('first_number')[0].value) + Number(document.getElementsByName("second_number")[0].value)
+            } ele.innerHTML = "<p>" + add() + "</p>";
+            break;
+        case "sub":
+            function sub() {
+                return Number(document.getElementsByName('first_number')[0].value) - Number(document.getElementsByName("second_number")[0].value)
+            } ele.innerHTML = "<p>" + sub() + "</p>";
+            break;
+        case "mul":
+            function mul() {
+                return Number(document.getElementsByName('first_number')[0].value) * Number(document.getElementsByName("second_number")[0].value)
+            } ele.innerHTML = "<p>" + mul() + "</p>";
+            break;
+        case "div":
+            function div() {
+                return Number(document.getElementsByName('first_number')[0].value) / Number(document.getElementsByName("second_number")[0].value)
+            } ele.innerHTML = "<p>" + div() + "</p>";
+            break;
+
+    }
+}
+
+    </script>
+
+</body>
+
+</html>

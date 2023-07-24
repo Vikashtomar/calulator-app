@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="one" placeholder="Enter a first Number">
+        <input type="number"  id="two" placeholder="Enter Second Number">
+        <select >
+            <option value="">OPERATION</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="">%</option>
+        </select>
+        
+    </form>
+    <p></p>
+    <script>
+        let allOption = document.querySelector("select");
+        let first = document.querySelector("#one");
+        let second = document.querySelector("#two");
+        let p = document.querySelector("p");
+        allOption.addEventListener("change",function()
+        {
+            if(allOption.value === "+")
+            {
+                p.innerHTML = Number(first.value) + Number(second.value);
+            }
+        })
+    </script>
+</body>
+</html>

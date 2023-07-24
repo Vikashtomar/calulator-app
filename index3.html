@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form >
+        <input type="text"   placeholder="Enter a Number">
+        <input type="text" placeholder="Enter a Second Number">
+        <select >
+            <option value="">Option</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <p>Result</p>
+    </form>
+
+    <script>
+        let allList = document.querySelector("select");
+        let  first = document.querySelector("input:first-of-type");
+        let second = document.querySelector("input:last-of-type");
+
+        allList.addEventListener("change",function()
+        {
+
+            if(allList.value === "+")
+            {
+                // console.log(Number(first.value) + Number(second.value));
+                document.querySelector("p").innerHTML = (Number(first.value) + Number(second.value));
+
+            }
+            if(allList.value === "-")
+            {
+                // console.log(Number(first.value) + Number(second.value));
+                document.querySelector("p").innerHTML = (Number(first.value) - Number(second.value));
+
+            }
+            if(allList.value === "*")
+            {
+                // console.log(Number(first.value) + Number(second.value));
+                document.querySelector("p").innerHTML = (Number(first.value) *  Number(second.value));
+
+            }
+            if(allList.value === "/")
+            {
+                // console.log(Number(first.value) + Number(second.value));
+                document.querySelector("p").innerHTML = (Number(first.value) / Number(second.value));
+
+            }
+            if(allList.value === "%")
+            {
+                // console.log(Number(first.value) + Number(second.value));
+                document.querySelector("p").innerHTML = (Number(first.value) % Number(second.value));
+
+            }
+        })
+
+        
+
+    </script>
+    
+ </body>
+ </html>
